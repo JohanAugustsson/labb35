@@ -9,41 +9,26 @@ class Counter extends React.Component {
     }
   }
 
+  handleClick=(nb)=>{
+    this.setState({number: this.state.number + nb})
+  }
+
+  handleChange=(e)=>{
+    let val = Number(e.target.value)
+    if(val === val){ // om vi får ett NaN så kommer if satsen ej köras.. NaN är ett objekt vilket inte är lika med sig själv :)
+      this.setState({number: val})
+    }
+  }
+
   render(){
     return(
       <div>
-        <button>+<button>
-        counter
+        <button className='btnDecrease' onClick={()=>this.handleClick(-1)}>-</button>
+        <input onChange={this.handleChange} type="text" value={this.state.number}/>
+        <button className="btnIncrease" onClick={()=>this.handleClick(1)}>+</button>
       </div>
     )
   }
 }
 
 export default Counter;
-
-//
-// class Counter extends React.Component {
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//       number : 0
-//     }
-//   }
-//
-//   handelClick = (nb) =>{
-//     this.setState({
-//       number: this.state.number + nb
-//     })
-//   }
-//
-//   render(){
-//     return(
-//       <div>
-//         <button onClick={ ()=> this.handelClick(-1) } > - </button>
-//         <input type="text"  value={ this.state.number }/>
-//         <button onClick={ ()=> this.handelClick(1) }> + </button>
-//
-//       </div>
-//     )
-//   }
-// }

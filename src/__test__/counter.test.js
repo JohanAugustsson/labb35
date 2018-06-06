@@ -20,7 +20,7 @@ describe('test av App', ()=>{
 
 describe('Test of Counter', ()=>{
 
-  test('counter is render without crashing', ()=>{
+  test('counter render shallow without crashing', ()=>{
     let wrapper = shallow(<Counter />)
   })
 
@@ -31,10 +31,45 @@ describe('Test of Counter', ()=>{
 
   test('counter is incresed when pressed add button', ()=>{
     let wrapper = shallow(<Counter />)
-    let button = wrapper.find('button').at(0);
+    let button = wrapper.find('.btnIncrease').at(0);
     button.simulate('click');
     expect( wrapper.state('number')).toBe(1);
+  })
 
+  test('counter is decresed when pressed decrese button', ()=>{
+    let wrapper = shallow(<Counter />)
+    let button = wrapper.find('.btnDecrease').at(0);
+    button.simulate('click');
+    expect( wrapper.state('number')).toBe(-1);
+  })
+
+  test('input is showing the right state value', ()=>{
+    let wrapper = shallow(<Counter />)
+    let inputValue = wrapper.find('input').at(0).props().value;
+    expect(wrapper.state('number')).toBe(inputValue);
+  })
+
+  test('change input value also change the state', ()=>{
+    let wrapper = shallow(<Counter />)
+    let keyStroke = "1"
+    let input = wrapper.find('input').at(0);
+    input.simulate('change',{target:{value : keyStroke}})
+    expect(wrapper.state('number')).toBe(1);
+  })
+
+  test('if input dose not convert to number state and input shall not change', ()=>{
+    let wrapper = shallow(<Counter />)
+    let keyStroke = "w"
+    let unchangedState = wrapper.state('number');
+    let input = wrapper.find('input').at(0);
+    input.simulate('change',{target:{value : keyStroke}})
+    expect(wrapper.state('number')).toBe(unchangedState);
+  })
+
+  test('check if both buttons is rendered', ()=>{
+    let wrapper = shallow(<Counter />)
+    const button = "<button>" ;
+    //expect(wrapper.contains(<button className='btnDecrease' onClick={()=>this.handleClick(-1)}>-</button>)).toBe(true);
   })
 
 })
