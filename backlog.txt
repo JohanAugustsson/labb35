@@ -1,0 +1,13 @@
+
+APP:
+Kontrollera att appen är renderad
+kontrollera att counter och wordreverse är monterade i app
+
+
+
+Counter:
+
+Användaren skall kunnan klicka på en knapp för att öka värdet
+Användaren skall kunnan klicka på en knapp för att minska värdet
+Om användaren skriver in ett tal i textfältet skall staten bytas ut 
+om användaren skirver in någt annat som ej går att göra om till tal skall inget hända.
