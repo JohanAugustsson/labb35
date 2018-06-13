@@ -1,13 +1,25 @@
 
 APP:
-Kontrollera att appen är renderad
-kontrollera att counter och wordreverse är monterade i app
+Kontrollera att appen ï¿½r renderad
+kontrollera att counter och wordreverse ï¿½r monterade i app
 
 
 
 Counter:
 
-Användaren skall kunnan klicka på en knapp för att öka värdet
-Användaren skall kunnan klicka på en knapp för att minska värdet
-Om användaren skriver in ett tal i textfältet skall staten bytas ut 
-om användaren skirver in någt annat som ej går att göra om till tal skall inget hända.
+Anvï¿½ndaren skall kunnan klicka pï¿½ en knapp fï¿½r att ï¿½ka vï¿½rdet
+Anvï¿½ndaren skall kunnan klicka pï¿½ en knapp fï¿½r att minska vï¿½rdet
+Om anvï¿½ndaren skriver in ett tal i textfï¿½ltet skall staten bytas ut
+om anvï¿½ndaren skirver in nï¿½gt annat som ej gï¿½r att gï¿½ra om till tal skall inget hï¿½nda.
+
+wordreverse:
+ett input element som tar emot ett 'string' element som kan innehÃ¥lla nummer och text.
+  tillÃ¥tna vÃ¤rden 'string', number, 'numberstring'
+anvÃ¤ndaren ska kunna skriva en text och fÃ¥ ett resultat
+
+tre textfÃ¤lt som tar emot input value:
+tectfÃ¤lt 1 - ska konvertera till reverse texten
+textfÃ¤lt 2 - ska konvertera alla bokstÃ¤ver till uppercase
+textfÃ¤lt 3 - ska bra fungera om det Ã¤r ett valid number fÃ¶r att kunna gÃ¶ra upphÃ¶jningen
+
+simulera input kolla alla tre textfÃ¤lt resultat
