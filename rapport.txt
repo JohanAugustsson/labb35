@@ -1,0 +1,21 @@
+Gå igenom den andra gruppens kod för varje uppgift och svara på följande frågor.
+
+Har ni testat samma saker?
+Redigerbar lista:
+  Vi har testat mer utförligt att arrayen skriver alla element för att kontrollera map funktionen och att de då renderats.
+  Vi har även simulerat tester för remove funktionen på befintlig lista. Ska dels ta bort valt element från lista i dom och i staten.
+  Vi har även testat att en tom sträng inte kan läggas till i listan
+
+Transform text:
+  Vi har missat att fånga att staten skrivs ut i respektive textfält på webbsidan.
+  Annars har vi testat samma saker.
+
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+  Att komponenten renderats
+  Att initialstate är rätt satta
+  Att elementen är monterade och synliga med rätt innehåll.
+  Att man simulerar hela kedjan, när ett event triggas och att eventuell output renderas korrekt.
+  De beror mycket på vad det är för funktion som man testar. En bank webbsida vill man vara extra noga med att allt skrivs ut.
+
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+  Formuleringen var lite fel på något ställe.
