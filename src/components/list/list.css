@@ -1,0 +1,19 @@
+.container-list {
+  background-color: rgb(103, 215, 183);
+  padding: 10px;
+}
+
+.container-list input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.container-list button {
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.container-list li {
+  list-style-type: none;
+}

@@ -29,6 +29,21 @@ describe('Test of Counter', ()=>{
     expect( wrapper.state('number') ).toBe(0);
   })
 
+  test('check if increase buttons is rendered', ()=>{
+    let wrapper = shallow(<Counter />)
+    expect(wrapper.find('.btnIncrease').length).toBe(1)
+  })
+
+  test('check if decrease buttons is rendered', ()=>{
+    let wrapper = shallow(<Counter />)
+    expect(wrapper.find('.btnDecrease').length).toBe(1)
+  })
+
+  test('check if input is rendered', ()=>{
+    let wrapper = shallow(<Counter />)
+    expect(wrapper.find('input').length).toBe(1)
+  })
+
   test('counter is incresed when pressed add button', ()=>{
     let wrapper = shallow(<Counter />)
     let button = wrapper.find('.btnIncrease').at(0);
@@ -64,12 +79,6 @@ describe('Test of Counter', ()=>{
     let input = wrapper.find('input').at(0);
     input.simulate('change',{target:{value : keyStroke}})
     expect(wrapper.state('number')).toBe(unchangedState);
-  })
-
-  test('check if both buttons is rendered', ()=>{
-    let wrapper = shallow(<Counter />)
-    const button = "<button>" ;
-    //expect(wrapper.contains(<button className='btnDecrease' onClick={()=>this.handleClick(-1)}>-</button>)).toBe(true);
   })
 
 })
