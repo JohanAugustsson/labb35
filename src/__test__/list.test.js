@@ -27,7 +27,7 @@ describe('test of list', ()=>{
   test('check initialstate of list', ()=>{
     const wrapper =  shallow(<List />);
     let arrayInState = wrapper.state('list');
-    expect(wrapper.state('list')).toEqual(expect.arrayContaining([]))
+    expect(wrapper.state('list')).toEqual([]);
   })
 
   test('check if state of list is rendered in ul list', ()=>{
@@ -45,7 +45,7 @@ describe('test of list', ()=>{
     let button = wrapper.find('.btnRemove').at(0);
     button.simulate('click');
     expect(wrapper.state('list').length).toBe(2);
-    expect(wrapper.state('list')).toEqual(expect.arrayContaining(["of","array"]))
+    expect(wrapper.state('list')).toEqual(["of","array"])
   })
 
 
@@ -65,7 +65,7 @@ describe('test of list', ()=>{
     let keyStroke = "hello";
     input.simulate('change',{target:{value : keyStroke}})
     button.simulate('click');
-    expect(wrapper.state('list')).toEqual(expect.arrayContaining([keyStroke]))
+    expect(wrapper.state('list')).toEqual([keyStroke])
   })
 
   test('check if button dont add empty input to list', ()=>{
