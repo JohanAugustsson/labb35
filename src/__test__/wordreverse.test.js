@@ -8,7 +8,7 @@ import WordReverse from '../components/wordreverse/wordreverse.js';
 describe('WordReverse test suit', ()=>{
 
   // test that the component renders
-  test('shallow smoke test', ()=>{
+  test('renders without crashing', ()=>{
     let wrapper = shallow(<WordReverse/>);
   });
 

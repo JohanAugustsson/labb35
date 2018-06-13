@@ -47,7 +47,7 @@ class WordReverse extends React.Component {
         <input onChange={this.handleChange} type="text" name="" value={this.inputValue}/>
         <div>
           <p>Reverse text!</p>
-          <div className='textDisplayReverse'></div>
+          <div className='textDisplayReverse'>{this.state.reverse}</div>
         </div>
         <div>
           <p>To uppercase text!</p>
