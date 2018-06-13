@@ -13,13 +13,25 @@ Om anv�ndaren skriver in ett tal i textf�ltet skall staten bytas ut
 om anv�ndaren skirver in n�gt annat som ej g�r att g�ra om till tal skall inget h�nda.
 
 wordreverse:
-ett input element som tar emot ett 'string' element som kan innehålla nummer och text.
-  tillåtna värden 'string', number, 'numberstring'
-användaren ska kunna skriva en text och få ett resultat
+Ett input element som tar emot event.target.value genom onChange och konverterar på automatik till 'string'.
+Man ska kunna skriva nummer och bokstäver i input elementet.
 
-tre textfält som tar emot input value:
-tectfält 1 - ska konvertera till reverse texten
-textfält 2 - ska konvertera alla bokstäver till uppercase
-textfält 3 - ska bra fungera om det är ett valid number för att kunna göra upphöjningen
+Användaren ska kunna skriva en text i input och få tre olika resultat beroende på input:
 
-simulera input kolla alla tre textfält resultat
+textfält 1 - reverse ska konvertera en textsträng från 'hej' till 'jeh'
+  tillåtna värden bokstäver, nummer
+textfält 2 - toUppercase ska konvertera alla bokstäver till stora bokstäver som t ex 'hej' till 'HEJ'
+  tillåtna värden bokstäver, nummer
+textfält 3 -toThePowerOf ska bara fungera om input värdet är ett valid number för att kunna göra en upphöjning till 2 t ex 2^2=4.
+ska ge ett error meddelande om man skriver in något annat än nummer.
+  tillåtna värden nummer
+
+kolla att alla element finns i komponenten.
+kolla värdet av state vid dess ursprung.
+simulera input kolla att alla tre textfält får förväntat resultat genom att kolla i state.
+
+List:
+Användaren skall kunna skriva in en sträng i ett input fält
+Användaren skall inte kunna skicka in en tom text sträng till listan
+Användaren skall kunna lägga till strängen i en lista
+Användaren skall kunna ta bort valfritt objekt i listan
